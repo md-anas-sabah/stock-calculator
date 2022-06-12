@@ -1,38 +1,100 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Share&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vh;
+  background-image: url("https://c1.wallpaperflare.com/preview/898/284/844/stock-trading-monitor-desk.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.app {
+  width: 55%;
+  height: 80vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 10%;
+  left: 22%;
+  color: white;
+  border: 3px solid rgb(13, 16, 162);
+  border-radius: 25px;
+}
+header {
+  text-align: center;
+  font-family: "Share", cursive;
+  padding: 1em;
+}
+.input_container {
+  text-align: center;
+  padding: 1.25em;
+}
+.flex {
+  display: flex;
+  gap: 1em;
+  margin: 0.875em auto;
+  padding: 1em;
+  justify-content: space-between;
+  align-items: center;
+}
+.number > input {
+  width: 15em;
+  height: 2.5em;
+  outline: none;
+  border: 2px solid rgb(173, 173, 233);
+  border-radius: 50px 25px / 25px 50px;
+  padding: 0.625em;
+  font-style: 1.25em;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.number > h4 {
+  padding: 0.5em 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.25em;
+  text-align: left;
+}
+button {
+  width: 9em;
+  height: 3.5em;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.875em;
+  display: block;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+button:hover {
+  background: transparent;
+  color: #fff;
+}
+.result {
+  text-align: center;
+  padding: 1em;
+}
+
+.result > p {
+  font-size: 1.25em;
+  margin: 0.625em 0;
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 10px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .flex {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .number > h4 {
+    text-align: center;
   }
 }
